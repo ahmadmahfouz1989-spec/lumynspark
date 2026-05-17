@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const SPARK_URL = 'https://ai-tutor-cyan-delta.vercel.app'
+const SPARK_URL = 'https://spark.lumynspark.com'
 
 /* ─── Navbar ─────────────────────────────────────────────────────── */
 function Navbar() {
