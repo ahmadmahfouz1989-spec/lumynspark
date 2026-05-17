@@ -68,10 +68,16 @@ function Hero() {
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-white/40 max-w-2xl mx-auto leading-relaxed mb-12 font-medium">
+        <p className="text-lg md:text-xl text-white/40 max-w-2xl mx-auto leading-relaxed mb-8 font-medium">
           Spark is a personal AI tutor that guides children through problems with questions and hints —
           never by giving answers. Real understanding, not just completed homework.
         </p>
+
+        <div className="inline-flex items-center gap-3 bg-white/[0.04] border border-white/[0.08] rounded-2xl px-5 py-3 mb-12">
+          <span className="text-white/30 text-sm font-semibold line-through">AI does the homework.</span>
+          <span className="text-white/15">→</span>
+          <span className="text-[#a5b4fc] text-sm font-bold">Spark teaches your child to do it themselves.</span>
+        </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
