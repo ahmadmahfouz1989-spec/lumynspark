@@ -100,7 +100,7 @@ export default function SubscribePage() {
                 ))}
               </div>
 
-              <a href={`${SPARK_URL}/login?redirect=/subscribe`} target="_blank" rel="noopener noreferrer"
+              <a href={`${SPARK_URL}/subscribe`} target="_blank" rel="noopener noreferrer"
                 className="block w-full text-center bg-[#6366f1] hover:bg-[#5558e8] text-white font-black py-4 rounded-2xl transition-all shadow-xl shadow-[#6366f1]/25 hover:shadow-[#6366f1]/40 hover:-translate-y-0.5 mb-3">
                 Subscribe now →
               </a>
@@ -133,7 +133,7 @@ export default function SubscribePage() {
 
             <div className="bg-[#6366f1]/5 border border-[#6366f1]/15 rounded-2xl p-5 mt-2">
               <p className="text-[#a5b4fc] text-xs font-semibold mb-1">Subscribed but need to manage?</p>
-              <a href={`${SPARK_URL}/login?redirect=/billing`} target="_blank" rel="noopener noreferrer"
+              <a href={`${SPARK_URL}/billing`} target="_blank" rel="noopener noreferrer"
                 className="text-white font-bold text-sm hover:text-[#a5b4fc] transition-colors">
                 Go to billing portal →
               </a>
