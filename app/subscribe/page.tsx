@@ -20,9 +20,9 @@ const FEATURES = [
 ]
 
 const STEPS = [
-  { n: '1', title: 'Create your account', body: `Go to spark.lumynspark.com and register as a parent.` },
-  { n: '2', title: 'Subscribe', body: 'Head to the Billing section and complete your subscription via Stripe.' },
-  { n: '3', title: 'Open the mobile app', body: 'Log in with the same email — your subscription activates instantly.' },
+  { n: '1', title: 'Create your account', body: 'Click the button below. You\'ll register as a parent with your email.' },
+  { n: '2', title: 'Complete payment via Stripe', body: 'After registration you\'ll land directly on the checkout page. Secure payment, cancel anytime.' },
+  { n: '3', title: 'Open the mobile app', body: 'Log in with the same email — your subscription is active immediately.' },
 ]
 
 export default function SubscribePage() {
@@ -100,11 +100,15 @@ export default function SubscribePage() {
                 ))}
               </div>
 
-              <a href={`${SPARK_URL}/register`} target="_blank" rel="noopener noreferrer"
+              <a href={`${SPARK_URL}/login?redirect=/subscribe`} target="_blank" rel="noopener noreferrer"
                 className="block w-full text-center bg-[#6366f1] hover:bg-[#5558e8] text-white font-black py-4 rounded-2xl transition-all shadow-xl shadow-[#6366f1]/25 hover:shadow-[#6366f1]/40 hover:-translate-y-0.5 mb-3">
-                Start free trial →
+                Subscribe now →
               </a>
-              <p className="text-center text-xs text-white/20">Secure payment by Stripe · No credit card for trial</p>
+              <a href={`${SPARK_URL}/register`} target="_blank" rel="noopener noreferrer"
+                className="block w-full text-center border border-white/[0.1] hover:border-white/20 text-white/50 hover:text-white font-bold py-3 rounded-2xl transition-all text-sm mb-3">
+                New here? Create a free account first
+              </a>
+              <p className="text-center text-xs text-white/20">Secure payment by Stripe · Cancel anytime</p>
             </div>
           </div>
 
@@ -128,10 +132,10 @@ export default function SubscribePage() {
             ))}
 
             <div className="bg-[#6366f1]/5 border border-[#6366f1]/15 rounded-2xl p-5 mt-2">
-              <p className="text-[#a5b4fc] text-xs font-semibold mb-1">Already have an account?</p>
-              <a href={`${SPARK_URL}/dashboard`} target="_blank" rel="noopener noreferrer"
+              <p className="text-[#a5b4fc] text-xs font-semibold mb-1">Subscribed but need to manage?</p>
+              <a href={`${SPARK_URL}/login?redirect=/billing`} target="_blank" rel="noopener noreferrer"
                 className="text-white font-bold text-sm hover:text-[#a5b4fc] transition-colors">
-                Sign in at spark.lumynspark.com →
+                Go to billing portal →
               </a>
             </div>
 
