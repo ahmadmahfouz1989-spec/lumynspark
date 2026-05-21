@@ -35,10 +35,6 @@ export default function SubscribePage() {
             <div className="w-7 h-7 bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] rounded-lg flex items-center justify-center text-xs font-black text-white shadow-lg shadow-[#6366f1]/30">L</div>
             <span className="font-black text-white text-sm tracking-tight">lumyn<span className="text-[#f59e0b]">spark</span></span>
           </a>
-          <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
-            className="text-sm bg-[#6366f1] hover:bg-[#5558e8] text-white font-bold px-4 py-2 rounded-xl transition-all shadow-lg shadow-[#6366f1]/25">
-            Go to Spark →
-          </a>
         </nav>
       </header>
 
