@@ -44,7 +44,7 @@ export default function SubscribePage() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-[#f59e0b]/10 border border-[#f59e0b]/20 rounded-full px-3.5 py-1.5 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
-            <span className="text-xs font-bold text-[#f59e0b] tracking-wide">14-day free trial — no credit card required</span>
+            <span className="text-xs font-bold text-[#f59e0b] tracking-wide">7-day free trial — no credit card required</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tighter text-white mb-4">
             One plan,<br />
@@ -78,7 +78,7 @@ export default function SubscribePage() {
                   <p className="text-white/30 text-sm font-medium">per month</p>
                 </div>
                 <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/25 rounded-2xl px-4 py-2 text-right">
-                  <p className="text-[#f59e0b] text-xs font-black">14-DAY</p>
+                  <p className="text-[#f59e0b] text-xs font-black">7-DAY</p>
                   <p className="text-[#f59e0b] text-xs font-black">FREE TRIAL</p>
                 </div>
               </div>

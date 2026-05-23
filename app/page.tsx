@@ -94,7 +94,7 @@ function Hero() {
         {/* Stats row */}
         <div className="flex flex-wrap items-center justify-center gap-8 mt-16 pt-16 border-t border-white/[0.06]">
           {[
-            { value: '14 days', label: 'Free trial' },
+            { value: '7 days', label: 'Free trial' },
             { value: '7–14', label: 'Target age' },
             { value: '$12.99', label: 'Per month, whole family' },
             { value: 'EN + FR', label: 'Fully bilingual' },
@@ -353,7 +353,7 @@ function ProductIntro() {
               <div className="flex flex-col gap-3">
                 <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2 bg-[#6366f1] hover:bg-[#5558e8] text-white font-bold py-4 rounded-2xl transition-all shadow-xl shadow-[#6366f1]/25 hover:-translate-y-0.5">
-                  Start your free 14-day trial
+                  Start your free 7-day trial
                   <span className="group-hover:translate-x-0.5 transition-transform">→</span>
                 </a>
                 <p className="text-center text-xs text-white/20 font-medium">No credit card required</p>
@@ -460,7 +460,7 @@ function Pricing() {
                 <p className="text-white/30 text-sm font-medium">per month</p>
               </div>
               <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/25 rounded-2xl px-4 py-2 text-right">
-                <p className="text-[#f59e0b] text-xs font-black">14-DAY</p>
+                <p className="text-[#f59e0b] text-xs font-black">7-DAY</p>
                 <p className="text-[#f59e0b] text-xs font-black">FREE TRIAL</p>
               </div>
             </div>
@@ -514,7 +514,7 @@ function CTA() {
             </p>
             <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-[#4338ca] font-black px-8 py-4 rounded-2xl text-base hover:bg-white/90 transition-all shadow-2xl shadow-[#6366f1]/30 hover:-translate-y-0.5">
-              Start your free 14-day trial →
+              Start your free 7-day trial →
             </a>
             <p className="text-white/20 text-sm mt-4 font-medium">No credit card required</p>
           </div>
