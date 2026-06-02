@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-const SPARK_URL = 'https://spark.lumynspark.com'
-
 /* ─── Navbar ─────────────────────────────────────────────────────── */
 function Navbar() {
   return (
@@ -14,20 +12,15 @@ function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-6">
-          {[['#product', 'Product'], ['#features', 'Features'], ['#pricing', 'Pricing']].map(([href, label]) => (
+          {[['#product', 'Products'], ['#features', 'Features'], ['#pricing', 'Pricing']].map(([href, label]) => (
             <a key={href} href={href} className="text-sm text-white/50 hover:text-white transition-colors font-medium">{label}</a>
           ))}
         </div>
 
         <div className="flex items-center gap-3 ml-2">
-          <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
-            className="text-sm text-white/60 hover:text-white transition-colors font-semibold hidden md:block">
-            Sign in
-          </a>
-          <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
-            className="text-sm bg-[#6366f1] hover:bg-[#5558e8] text-white font-bold px-4 py-2 rounded-xl transition-all shadow-lg shadow-[#6366f1]/25 hover:shadow-[#6366f1]/40">
-            Try Spark free →
-          </a>
+          <span className="text-sm bg-[#6366f1]/15 text-[#a5b4fc] font-bold px-4 py-2 rounded-xl border border-[#6366f1]/25">
+            Coming soon
+          </span>
         </div>
       </nav>
     </header>
@@ -55,49 +48,44 @@ function Hero() {
         <div className="inline-flex items-center gap-2 mb-8">
           <div className="flex items-center gap-1.5 bg-[#6366f1]/10 border border-[#6366f1]/20 rounded-full px-3.5 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#6366f1] animate-glow" />
-            <span className="text-xs font-semibold text-[#a5b4fc] tracking-wide">Introducing Spark — built by Lumyn Spark</span>
+            <span className="text-xs font-semibold text-[#a5b4fc] tracking-wide">The AI product studio</span>
           </div>
         </div>
 
         {/* Headline */}
         <h1 className="text-[clamp(48px,8vw,96px)] font-black tracking-tighter leading-[0.95] text-white mb-8">
-          The AI tutor that<br />
+          We take AI and build<br />
           <span className="inline-block text-transparent bg-clip-text animate-gradient-x"
             style={{ backgroundImage: 'linear-gradient(90deg, #6366f1, #a78bfa, #c4b5fd, #6366f1)' }}>
-            teaches children to think
+            what actually matters
           </span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/40 max-w-2xl mx-auto leading-relaxed mb-8 font-medium">
-          Spark is a personal AI tutor that guides children through problems with questions and hints —
-          never by giving answers. Real understanding, not just completed homework.
+          Lumyn Spark takes the world's most capable AI models and wraps them into focused products
+          that solve real problems for real people — not demos that impress once, but tools that work every day.
         </p>
 
         <div className="inline-flex items-center gap-3 bg-white/[0.04] border border-white/[0.08] rounded-2xl px-5 py-3 mb-12">
-          <span className="text-white/30 text-sm font-semibold line-through">AI does the homework.</span>
+          <span className="text-white/30 text-sm font-semibold line-through">Raw AI capability.</span>
           <span className="text-white/15">→</span>
-          <span className="text-[#a5b4fc] text-sm font-bold">Spark teaches your child to do it themselves.</span>
+          <span className="text-[#a5b4fc] text-sm font-bold">Products people actually use.</span>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
-            className="group relative flex items-center gap-2 bg-[#6366f1] hover:bg-[#5558e8] text-white font-bold px-7 py-4 rounded-2xl text-base transition-all shadow-2xl shadow-[#6366f1]/30 hover:shadow-[#6366f1]/50 hover:-translate-y-0.5">
-            <span>Start free trial</span>
-            <span className="group-hover:translate-x-0.5 transition-transform">→</span>
-          </a>
           <a href="#product"
             className="flex items-center gap-2 text-white/50 hover:text-white font-semibold px-7 py-4 rounded-2xl text-base transition-colors border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04]">
-            See how it works
+            See our first product ↓
           </a>
         </div>
 
         {/* Stats row */}
         <div className="flex flex-wrap items-center justify-center gap-8 mt-16 pt-16 border-t border-white/[0.06]">
           {[
-            { value: '7 days', label: 'Free trial' },
-            { value: '7–14', label: 'Target age' },
-            { value: '$12.99', label: 'Per month, whole family' },
-            { value: 'EN + FR', label: 'Fully bilingual' },
+            { value: 'AI', label: 'At the core' },
+            { value: 'Real', label: 'Problems we solve' },
+            { value: 'People', label: 'Who we build for' },
+            { value: 'More', label: 'Products coming' },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="text-2xl font-black text-white">{s.value}</div>
@@ -112,9 +100,9 @@ function Hero() {
 
 /* ─── Marquee ────────────────────────────────────────────────────── */
 const MARQUEE_ITEMS = [
-  '✦ Guides, never tells', '✦ Adaptive curriculum', '✦ Textbook scanning', '✦ Homework tracker',
-  '✦ Parent summaries', '✦ Mastery tracking', '✦ Safe for children', '✦ English & French',
-  '✦ Powered by Claude', '✦ Cancel anytime',
+  '✦ AI wrapped for real value', '✦ Products, not demos', '✦ Built for real problems', '✦ Safe by design',
+  '✦ Powered by Claude', '✦ Human-centered', '✦ Thoughtful & transparent', '✦ Cancel anytime',
+  '✦ Spark — our first product', '✦ More coming soon',
 ]
 
 function Marquee() {
@@ -215,7 +203,7 @@ function BentoGrid() {
     <section id="features" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-xs text-[#a5b4fc] font-bold uppercase tracking-widest mb-3">Built different</p>
+          <p className="text-xs text-[#a5b4fc] font-bold uppercase tracking-widest mb-3">Spark — our first product</p>
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Everything a child needs to<br />actually understand</h2>
         </div>
 
@@ -351,12 +339,9 @@ function ProductIntro() {
                 helping children discover solutions themselves. Built on Claude by Anthropic, the safest AI available.
               </p>
               <div className="flex flex-col gap-3">
-                <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2 bg-[#6366f1] hover:bg-[#5558e8] text-white font-bold py-4 rounded-2xl transition-all shadow-xl shadow-[#6366f1]/25 hover:-translate-y-0.5">
-                  Start your free 7-day trial
-                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
-                </a>
-                <p className="text-center text-xs text-white/20 font-medium">No credit card required</p>
+                <span className="inline-flex items-center justify-center gap-2 bg-[#6366f1]/15 text-[#a5b4fc] font-bold py-4 rounded-2xl border border-[#6366f1]/25">
+                  Coming soon
+                </span>
               </div>
             </div>
 
@@ -392,14 +377,14 @@ function Company() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-xs text-[#f59e0b] font-bold uppercase tracking-widest mb-4">Who we are</p>
-            <h2 className="text-4xl font-black text-white tracking-tight mb-6">AI engines,<br />done right.</h2>
+            <h2 className="text-4xl font-black text-white tracking-tight mb-6">We wrap AI.<br />We deliver value.</h2>
             <p className="text-white/40 leading-relaxed text-base mb-6">
-              Lumyn Spark builds products that use AI in ways that are thoughtful, safe, and genuinely useful —
-              not impressive demos that fade after a week.
+              Lumyn Spark takes the world's most capable AI models and wraps them into focused products
+              that solve real problems — not impressive demos, not science projects. Products people actually use.
             </p>
             <p className="text-white/40 leading-relaxed text-base">
-              Every product we make starts with a real human need, uses the best available AI models responsibly,
-              and keeps people in control. Spark is our first product. More are coming.
+              Every product starts with a real human need. We pick the right AI, build around it thoughtfully,
+              and put people in control. Spark is our first product. More are coming.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4">
@@ -478,10 +463,9 @@ function Pricing() {
               ))}
             </div>
 
-            <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
-              className="block w-full text-center bg-[#6366f1] hover:bg-[#5558e8] text-white font-black py-4 rounded-2xl transition-all shadow-xl shadow-[#6366f1]/25 hover:shadow-[#6366f1]/40 hover:-translate-y-0.5 mb-3">
-              Start free trial →
-            </a>
+            <span className="block w-full text-center bg-[#6366f1]/15 text-[#a5b4fc] font-black py-4 rounded-2xl border border-[#6366f1]/25 mb-3">
+              Coming soon
+            </span>
             <p className="text-center text-xs text-white/20">Secure payment by Stripe · No credit card for trial</p>
           </div>
         </div>
@@ -504,19 +488,17 @@ function CTA() {
 
           <div className="relative">
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight mb-5">
-              Give your child<br />
+              AI built right.<br />
               <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(90deg, #6366f1, #a78bfa, #c4b5fd)' }}>
-                a real edge
+                More products coming.
               </span>
             </h2>
             <p className="text-white/40 text-lg mb-10 max-w-xl mx-auto">
-              Join families building real academic confidence — one guided conversation at a time.
+              Spark is just the beginning. We're building a portfolio of AI products that solve real problems for real people.
             </p>
-            <a href={SPARK_URL} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-[#4338ca] font-black px-8 py-4 rounded-2xl text-base hover:bg-white/90 transition-all shadow-2xl shadow-[#6366f1]/30 hover:-translate-y-0.5">
-              Start your free 7-day trial →
-            </a>
-            <p className="text-white/20 text-sm mt-4 font-medium">No credit card required</p>
+            <span className="inline-flex items-center gap-2 bg-white/10 text-[#a5b4fc] font-black px-8 py-4 rounded-2xl text-base border border-white/10">
+              More coming soon
+            </span>
           </div>
         </div>
       </div>
@@ -536,7 +518,7 @@ function Footer() {
           </div>
 
           <div className="flex items-center gap-8 text-sm text-white/25 font-medium">
-            <a href="#product" className="hover:text-white/60 transition-colors">Product</a>
+            <a href="#product" className="hover:text-white/60 transition-colors">Products</a>
             <a href="#features" className="hover:text-white/60 transition-colors">Features</a>
             <a href="#pricing" className="hover:text-white/60 transition-colors">Pricing</a>
             <a href="mailto:hello@lumynspark.com" className="hover:text-white/60 transition-colors">hello@lumynspark.com</a>

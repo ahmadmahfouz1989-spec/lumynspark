@@ -5,8 +5,6 @@ export const metadata = {
   description: 'Get unlimited access to Spark for your whole family. $12.99/month, cancel anytime.',
 }
 
-const SPARK_URL = 'https://spark.lumynspark.com'
-
 const FEATURES = [
   'Unlimited children in your household',
   'Unlimited tutoring sessions',
@@ -96,14 +94,9 @@ export default function SubscribePage() {
                 ))}
               </div>
 
-              <a href={`${SPARK_URL}/subscribe`} target="_blank" rel="noopener noreferrer"
-                className="block w-full text-center bg-[#6366f1] hover:bg-[#5558e8] text-white font-black py-4 rounded-2xl transition-all shadow-xl shadow-[#6366f1]/25 hover:shadow-[#6366f1]/40 hover:-translate-y-0.5 mb-3">
-                Subscribe now →
-              </a>
-              <a href={`${SPARK_URL}/register`} target="_blank" rel="noopener noreferrer"
-                className="block w-full text-center border border-white/[0.1] hover:border-white/20 text-white/50 hover:text-white font-bold py-3 rounded-2xl transition-all text-sm mb-3">
-                New here? Create a free account first
-              </a>
+              <span className="block w-full text-center bg-[#6366f1]/15 text-[#a5b4fc] font-black py-4 rounded-2xl border border-[#6366f1]/25 mb-3">
+                Coming soon
+              </span>
               <p className="text-center text-xs text-white/20">Secure payment by Stripe · Cancel anytime</p>
             </div>
           </div>
@@ -129,10 +122,7 @@ export default function SubscribePage() {
 
             <div className="bg-[#6366f1]/5 border border-[#6366f1]/15 rounded-2xl p-5 mt-2">
               <p className="text-[#a5b4fc] text-xs font-semibold mb-1">Subscribed but need to manage?</p>
-              <a href={`${SPARK_URL}/billing`} target="_blank" rel="noopener noreferrer"
-                className="text-white font-bold text-sm hover:text-[#a5b4fc] transition-colors">
-                Go to billing portal →
-              </a>
+              <p className="text-white/40 text-sm">Billing portal coming soon</p>
             </div>
 
             <div className="text-white/20 text-xs space-y-1 pt-2">
