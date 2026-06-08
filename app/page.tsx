@@ -18,9 +18,9 @@ function Navbar() {
         </div>
 
         <div className="flex items-center gap-3 ml-2">
-          <span className="text-sm bg-[#6366f1]/15 text-[#a5b4fc] font-bold px-4 py-2 rounded-xl border border-[#6366f1]/25">
-            Coming soon
-          </span>
+          <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="text-sm bg-[#6366f1]/15 text-[#a5b4fc] font-bold px-4 py-2 rounded-xl border border-[#6366f1]/25 hover:bg-[#6366f1]/25 transition-colors">
+            Download on iOS
+          </a>
         </div>
       </nav>
     </header>
@@ -339,9 +339,9 @@ function ProductIntro() {
                 helping children discover solutions themselves. Built on Claude by Anthropic, the safest AI available.
               </p>
               <div className="flex flex-col gap-3">
-                <span className="inline-flex items-center justify-center gap-2 bg-[#6366f1]/15 text-[#a5b4fc] font-bold py-4 rounded-2xl border border-[#6366f1]/25">
-                  Coming soon
-                </span>
+                <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#6366f1] text-white font-bold py-4 rounded-2xl hover:bg-[#4f52d4] transition-colors">
+                  Download on the App Store
+                </a>
               </div>
             </div>
 
@@ -463,9 +463,9 @@ function Pricing() {
               ))}
             </div>
 
-            <span className="block w-full text-center bg-[#6366f1]/15 text-[#a5b4fc] font-black py-4 rounded-2xl border border-[#6366f1]/25 mb-3">
-              Coming soon
-            </span>
+            <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-[#6366f1] text-white font-black py-4 rounded-2xl hover:bg-[#4f52d4] transition-colors mb-3">
+              Download on the App Store
+            </a>
             <p className="text-center text-xs text-white/20">Secure payment by Stripe · No credit card for trial</p>
           </div>
         </div>
