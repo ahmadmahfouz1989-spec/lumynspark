@@ -253,10 +253,10 @@ function BentoGrid() {
 
           {/* Child memory */}
           <div className="col-span-12 md:col-span-4 row-span-3 gradient-border p-6 relative overflow-hidden">
-            <h3 className="text-lg font-black text-white mb-2">🧠 Remembers your child</h3>
-            <p className="text-sm text-white/40 leading-relaxed">Spark builds a profile over time — hobbies, learning pace, common mistakes — making every session feel personal.</p>
+            <h3 className="text-lg font-black text-white mb-2">🧠 Learns your child</h3>
+            <p className="text-sm text-white/40 leading-relaxed">After every session, Spark builds a personalised strategy playbook — what explanations click, what pace works, how to recover when they're stuck.</p>
             <div className="mt-4 space-y-2">
-              {['"Loves dinosaurs"', '"Struggles with fractions"', '"Fast at reading"'].map((note) => (
+              {['"Sports analogies always click"', '"Needs 2 hints, then gets it"', '"Speeds up when challenged"'].map((note) => (
                 <div key={note} className="flex items-center gap-2 text-xs text-white/30 bg-white/[0.03] rounded-lg px-3 py-1.5 border border-white/[0.05]">
                   <span className="text-[#6366f1]">✦</span> {note}
                 </div>
@@ -359,6 +359,101 @@ function ProductIntro() {
                     <p className="text-white/40 text-xs leading-relaxed">{p.desc}</p>
                   </div>
                   <div className="ml-auto text-white/20 text-sm">→</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── How Spark learns ───────────────────────────────────────────── */
+function HowItLearns() {
+  const steps = [
+    {
+      number: '01',
+      icon: '💬',
+      title: 'Spark teaches',
+      body: 'Every session, Spark tries different explanations, analogies, and approaches — watching how your child responds to each one.',
+    },
+    {
+      number: '02',
+      icon: '🔬',
+      title: 'Spark analyses',
+      body: 'After the session ends, Spark evaluates which teaching moves produced breakthroughs and which fell flat — using actual correct/incorrect outcomes as the signal, not guesswork.',
+    },
+    {
+      number: '03',
+      icon: '📋',
+      title: 'Spark adapts',
+      body: 'A personalised strategy playbook is built and refined over time. Next session, the approaches that worked best for your child are applied first — and the ones that didn\'t are dropped.',
+    },
+  ]
+
+  return (
+    <section className="py-24 px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-xs text-[#a5b4fc] font-bold uppercase tracking-widest mb-3">Adaptive learning</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            Spark gets smarter<br />every single session
+          </h2>
+          <p className="text-white/40 max-w-xl mx-auto leading-relaxed">
+            Most tutoring apps give every child the same experience. Spark builds a model of <em>your</em> child
+            — and improves its teaching strategy each time they learn together.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-5 mb-14">
+          {steps.map((step) => (
+            <div key={step.number} className="gradient-border p-7 flex flex-col gap-4 relative overflow-hidden">
+              <div className="absolute top-4 right-5 text-5xl font-black text-white/[0.04] select-none pointer-events-none leading-none">{step.number}</div>
+              <div className="text-3xl">{step.icon}</div>
+              <div>
+                <p className="text-white font-black text-base mb-2">{step.title}</p>
+                <p className="text-white/40 text-sm leading-relaxed">{step.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Strategy playbook mockup */}
+        <div className="gradient-border p-8 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none"
+            style={{ background: 'radial-gradient(circle at top right, rgba(99,102,241,0.08) 0%, transparent 60%)' }} />
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="md:w-1/3">
+              <p className="text-xs text-[#a5b4fc] font-bold uppercase tracking-widest mb-3">Example playbook</p>
+              <h3 className="text-xl font-black text-white mb-3">What Spark learns about your child</h3>
+              <p className="text-white/35 text-sm leading-relaxed">
+                Each strategy is scored by confidence — the more sessions confirm it, the more Spark relies on it. Strategies that stop working are quietly retired.
+              </p>
+            </div>
+            <div className="md:w-2/3 space-y-3">
+              {[
+                { condition: 'When introducing a new concept', strategy: 'Use a sports analogy first — always unlocks the idea faster', confidence: 0.94, sessions: 8 },
+                { condition: 'When child is stuck after 2 attempts', strategy: 'Ask them to draw or describe the problem before offering a hint', confidence: 0.82, sessions: 5 },
+                { condition: 'When child gets 3 in a row correct', strategy: 'Skip extra scaffolding and jump straight to the harder version', confidence: 0.76, sessions: 4 },
+                { condition: 'When frustration signals appear', strategy: 'Pause content, tell a short funny fact, then reframe the question', confidence: 0.71, sessions: 3 },
+              ].map((s) => (
+                <div key={s.condition} className="bg-white/[0.03] border border-white/[0.06] rounded-2xl px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] text-white/25 font-semibold uppercase tracking-wide mb-1">{s.condition}</p>
+                    <p className="text-white/70 text-sm font-medium leading-snug">{s.strategy}</p>
+                  </div>
+                  <div className="flex items-center gap-3 flex-shrink-0">
+                    <div className="text-right">
+                      <p className="text-[10px] text-white/20 font-semibold uppercase tracking-wide">Confidence</p>
+                      <p className="text-[#a5b4fc] font-black text-sm">{Math.round(s.confidence * 100)}%</p>
+                    </div>
+                    <div className="w-px h-8 bg-white/[0.06]" />
+                    <div className="text-right">
+                      <p className="text-[10px] text-white/20 font-semibold uppercase tracking-wide">Sessions</p>
+                      <p className="text-white/50 font-black text-sm">{s.sessions}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -546,6 +641,7 @@ export default function Home() {
         <Marquee />
         <ProductIntro />
         <BentoGrid />
+        <HowItLearns />
         <Company />
         <Pricing />
         <CTA />
