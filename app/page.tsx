@@ -18,6 +18,9 @@ function Navbar() {
         </div>
 
         <div className="flex items-center gap-3 ml-2">
+          <a href="https://spark.lumynspark.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-white font-bold px-4 py-2 rounded-xl border border-white/[0.08] hover:border-white/20 transition-colors">
+            Try on Web
+          </a>
           <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="text-sm bg-[#6366f1]/15 text-[#a5b4fc] font-bold px-4 py-2 rounded-xl border border-[#6366f1]/25 hover:bg-[#6366f1]/25 transition-colors">
             Download on iOS
           </a>
@@ -73,6 +76,10 @@ function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://spark.lumynspark.com" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#6366f1] text-white font-bold px-7 py-4 rounded-2xl text-base hover:bg-[#4f52d4] transition-colors">
+            Try Spark on the Web →
+          </a>
           <a href="#product"
             className="flex items-center gap-2 text-white/50 hover:text-white font-semibold px-7 py-4 rounded-2xl text-base transition-colors border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04]">
             See our first product ↓
@@ -338,9 +345,12 @@ function ProductIntro() {
                 A personal AI tutor for children ages 7–14. Instead of giving answers, Spark asks the right questions —
                 helping children discover solutions themselves. Built on Claude by Anthropic, the safest AI available.
               </p>
-              <div className="flex flex-col gap-3">
-                <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#6366f1] text-white font-bold py-4 rounded-2xl hover:bg-[#4f52d4] transition-colors">
-                  Download on the App Store
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a href="https://spark.lumynspark.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#6366f1] text-white font-bold py-4 px-6 rounded-2xl hover:bg-[#4f52d4] transition-colors">
+                  Try Spark on the Web
+                </a>
+                <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-white/[0.06] text-white font-bold py-4 px-6 rounded-2xl border border-white/[0.1] hover:bg-white/[0.1] transition-colors">
+                  Download on iOS
                 </a>
               </div>
             </div>
@@ -348,18 +358,18 @@ function ProductIntro() {
             {/* Platform badges */}
             <div className="flex flex-col gap-4">
               {[
-                { icon: '🌐', platform: 'Web app', desc: 'Works in any browser, no install needed' },
-                { icon: '📱', platform: 'iOS & Android', desc: 'Native mobile app for learning on the go' },
-                { icon: '👨‍👩‍👧', platform: 'Parent dashboard', desc: 'Full visibility into progress and sessions' },
+                { icon: '🌐', platform: 'Web app', desc: 'Works in any browser, no install needed', href: 'https://spark.lumynspark.com' },
+                { icon: '📱', platform: 'iOS & Android', desc: 'Native mobile app for learning on the go', href: 'https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521' },
+                { icon: '👨‍👩‍👧', platform: 'Parent dashboard', desc: 'Full visibility into progress and sessions', href: 'https://spark.lumynspark.com' },
               ].map((p) => (
-                <div key={p.platform} className="flex items-start gap-4 bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5 hover:border-[#6366f1]/30 transition-colors">
+                <a key={p.platform} href={p.href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5 hover:border-[#6366f1]/30 transition-colors">
                   <div className="text-2xl">{p.icon}</div>
                   <div>
                     <p className="text-white font-bold text-sm mb-0.5">{p.platform}</p>
                     <p className="text-white/40 text-xs leading-relaxed">{p.desc}</p>
                   </div>
                   <div className="ml-auto text-white/20 text-sm">→</div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -558,7 +568,10 @@ function Pricing() {
               ))}
             </div>
 
-            <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-[#6366f1] text-white font-black py-4 rounded-2xl hover:bg-[#4f52d4] transition-colors mb-3">
+            <a href="https://spark.lumynspark.com" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-[#6366f1] text-white font-black py-4 rounded-2xl hover:bg-[#4f52d4] transition-colors mb-3">
+              Start Free Trial on the Web
+            </a>
+            <a href="https://apps.apple.com/ca/app/spark-ai-tutor/id6768868521" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-white/[0.06] text-white font-bold py-4 rounded-2xl border border-white/[0.1] hover:bg-white/[0.1] transition-colors mb-3">
               Download on the App Store
             </a>
             <p className="text-center text-xs text-white/20">Secure payment by Stripe · No credit card for trial</p>
@@ -616,6 +629,7 @@ function Footer() {
             <a href="#product" className="hover:text-white/60 transition-colors">Products</a>
             <a href="#features" className="hover:text-white/60 transition-colors">Features</a>
             <a href="#pricing" className="hover:text-white/60 transition-colors">Pricing</a>
+            <a href="https://spark.lumynspark.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/60 transition-colors">Try Spark</a>
             <a href="mailto:hello@lumynspark.com" className="hover:text-white/60 transition-colors">hello@lumynspark.com</a>
           </div>
 
